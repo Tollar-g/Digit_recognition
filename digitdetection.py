@@ -15,15 +15,15 @@ model.compile(optimizer='adam',loss='sparse_categorical_crossentropy',metrics='a
 model.fit(x_train,y_train,epochs=3)
 
 model.save('detection.model')
-model = tf.keras.models.load_model('detection.model')
+# model = tf.keras.models.load_model('detection.model')
 
-x = 0
-y = 9
+# x = 0
+# y = 9
 
-while x < y:
-    prediction = model.predict(x_test)
-    predict = np.argmax(prediction[x])
-    plt.title(f"This is probably: {predict}")
-    plt.imshow(x_test[x], cmap=plt.cm.binary)
-    plt.show()
-    x += 1
+# while x < y:
+#     prediction = model.predict(x_test)
+#     predict = np.argmax(prediction[x])
+#     plt.title(f"This is probably: {predict}")
+#     plt.imshow(x_test[x], cmap=plt.cm.binary)
+#     plt.show()
+#     x += 1
